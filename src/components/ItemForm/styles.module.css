@@ -1,0 +1,17 @@
+.container {
+	border: 2px solid;
+	border-radius: 1.5rem;
+	display: inline-block;
+	height: 50rem;
+	margin: 0;
+	padding: 5px;
+	text-align: center;
+	width: 25%;
+}
+
+.inputForm {
+}
+
+.title {
+	width: 100%;
+}
