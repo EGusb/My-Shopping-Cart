@@ -1,5 +1,5 @@
 .item {
-  background-color: aquamarine;
+  background-color: goldenrod;
   border: 2px solid;
   border-radius: 1.5rem;
   color: black;
@@ -8,6 +8,12 @@
   max-width: 230px;
   min-width: 160px;
   padding: 0.5rem;
-  text-align: center;
+  text-align: justify;
   width: 25%;
+}
+
+.buttonContainer {
+  margin: 5px auto;
+  padding: 0.5rem;
+  text-align: center;
 }
