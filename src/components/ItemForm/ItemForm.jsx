@@ -1,14 +1,18 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import styles from "./styles.module.css";
 import InputField from "./InputField";
 
-export default function ItemForm() {
+export default function ItemForm(props) {
+  const { onAdd: addItem } = props;
   const [product, setProduct] = useState({ name: "", description: "", price: "" });
 
   function handleClick(event) {
     event.preventDefault();
-    console.log(product);
-    setProduct({ name: "", description: "", price: "" });
+    if (product.name !== "" && product.price > 0) {
+      addItem(product);
+      setProduct({ name: "", description: "", price: "" });
+    }
   }
 
   function handleChange(event) {
@@ -31,7 +35,9 @@ export default function ItemForm() {
           onChange={handleChange}
         />
         <InputField name="price" value={product.price} type="number" textContent="Precio" onChange={handleChange} />
-        <button className={styles.formButton} onClick={handleClick}>Agregar</button>
+        <button className={styles.formButton} onClick={handleClick}>
+          Agregar
+        </button>
       </form>
     </div>
   );
