@@ -13,7 +13,33 @@ main {
 	width: 25%;
 }
 
+.inputContainer {
+	padding-bottom: 4rem;
+	padding-top: 1rem;
+	text-align: center;
+}
+
+.inputField {
+	background-color:dimgray;
+	border: 1px solid white;
+	border-radius: 1rem;
+	display: block;
+	font-size: large;
+	margin: auto;
+	padding: 0.5rem;
+	text-align: center;
+}
+
 .inputForm {
+	border: 1px solid;
+	border-radius: 1.5rem;
+	padding: 5px;
+}
+
+.inputLabel {
+	display: block;
+	font-size: small;
+	padding-top: 0.5rem;
 }
 
 .title {
