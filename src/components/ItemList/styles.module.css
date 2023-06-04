@@ -1,0 +1,17 @@
+.listContainer {
+  border: 2px solid;
+  border-radius: 1.5rem;
+  float: right;
+  margin: 0.5rem;
+  text-align: justify;
+  width: 75%;
+}
+
+.list {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  text-align: center;
+}

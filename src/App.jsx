@@ -19,8 +19,8 @@ export default function App() {
 
   return (
     <main>
-      <ItemForm onAdd={addItem} />
-      <ItemList onDelete={deleteItem}>{items}</ItemList>
+        <ItemForm onAdd={addItem} />
+        <ItemList onDelete={deleteItem}>{items}</ItemList>
     </main>
   );
 }

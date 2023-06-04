@@ -1,0 +1,13 @@
+.item {
+  background-color: aquamarine;
+  border: 2px solid;
+  border-radius: 1.5rem;
+  color: black;
+  display: inline-block;
+  margin: 0.25rem;
+  max-width: 230px;
+  min-width: 160px;
+  padding: 0.5rem;
+  text-align: center;
+  width: 25%;
+}
