@@ -28,6 +28,7 @@ main {
 	margin: auto;
 	padding: 0.5rem;
 	text-align: center;
+	width: 80%;
 }
 
 .inputForm {
@@ -43,5 +44,6 @@ main {
 }
 
 .title {
+	font-size: x-large;
 	width: 100%;
 }
