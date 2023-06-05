@@ -2,7 +2,7 @@
 import styles from "./styles.module.css";
 
 export default function InputField(props) {
-  const { name, value, type, onChange, textContent = "", autoComplete = "off" } = props;
+  const { name, value, type, onChange, labelContent = "", autoComplete = "off" } = props;
   const inputFieldId = `input-form-${name}`;
 
   return (
@@ -17,7 +17,7 @@ export default function InputField(props) {
         autoComplete={autoComplete}
       />
       <label className={styles.inputLabel} htmlFor={inputFieldId}>
-        {textContent}
+        {labelContent}
       </label>
     </div>
   );

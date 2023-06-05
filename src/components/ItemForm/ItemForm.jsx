@@ -26,15 +26,15 @@ export default function ItemForm(props) {
     <div className={styles.container}>
       <h1 className={styles.title}>Cargar Producto</h1>
       <form className={styles.inputForm}>
-        <InputField name="name" value={product.name} type="text" textContent="Nombre" onChange={handleChange} />
+        <InputField name="name" value={product.name} type="text" labelContent="Nombre" onChange={handleChange} />
         <InputField
           name="description"
           value={product.description}
           type="text"
-          textContent="Descripción (opcional)"
+          labelContent="Descripción (opcional)"
           onChange={handleChange}
         />
-        <InputField name="price" value={product.price} type="number" textContent="Precio" onChange={handleChange} />
+        <InputField name="price" value={product.price} type="number" labelContent="Precio" onChange={handleChange} />
         <button className={styles.formButton} onClick={handleClick}>
           Agregar
         </button>

@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "./styles.module.css";
 
 export default function Item(props) {
-  const { name, description, price, id, onDelete } = props;
+  const { name, description, price, id, onDelete: deleteItem } = props;
   const [itemCount, setItemCount] = useState(0);
   const [totalPrice, setTotalPrice] = useState(Number(0).toFixed(2));
 
@@ -20,7 +20,7 @@ export default function Item(props) {
   return (
     <div id={`item${id}`} className={styles.item}>
       <h1>{name}</h1>
-      <h2>{description}</h2>
+      <h3>{description}</h3>
       <h4>$ {price}</h4>
       <div className={styles.buttonContainer}>
         {/* <button className={styles.button} onClick={() => onDelete(id)}>
