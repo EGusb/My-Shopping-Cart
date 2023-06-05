@@ -9,7 +9,7 @@
 }
 
 .list {
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
 }
 
