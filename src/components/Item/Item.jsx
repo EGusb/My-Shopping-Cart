@@ -31,10 +31,10 @@ export default function Item(props) {
           +
         </button>
         <h3>{totalPrice}</h3>
+        <button className={styles.buttonDelete} onClick={() => deleteItem(id)}>
+          <i className="fa-solid fa-trash-can"></i>
+        </button>
       </div>
-      <button className={styles.buttonDelete} onClick={() => deleteItem(id)}>
-        <i className="fa-solid fa-trash-can"></i>
-      </button>
     </div>
   );
 }
