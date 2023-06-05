@@ -18,14 +18,11 @@ export default function Item(props) {
   }
 
   return (
-    <div id={`item${id}`} className={styles.item}>
+    <div id={id} className={styles.item}>
       <h1>{name}</h1>
       <h3>{description}</h3>
       <h4>$ {price}</h4>
       <div className={styles.buttonContainer}>
-        {/* <button className={styles.button} onClick={() => onDelete(id)}>
-          <i className="fa-solid fa-trash-can"></i>
-        </button> */}
         <button className={styles.button} onClick={() => handleClick(-1)}>
           -
         </button>
@@ -35,6 +32,9 @@ export default function Item(props) {
         </button>
         <h3>{totalPrice}</h3>
       </div>
+      <button className={styles.buttonDelete} onClick={() => deleteItem(id)}>
+        <i className="fa-solid fa-trash-can"></i>
+      </button>
     </div>
   );
 }

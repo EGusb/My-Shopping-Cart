@@ -5,7 +5,7 @@ import InputField from "./InputField";
 
 export default function ItemForm(props) {
   const { onAdd: addItem } = props;
-  const [product, setProduct] = useState({ name: "", description: "", price: "" });
+  const [product, setProduct] = useState({ id: "", name: "", description: "", price: "" });
 
   function handleClick(event) {
     event.preventDefault();
@@ -34,7 +34,14 @@ export default function ItemForm(props) {
           labelContent="Descripción (opcional)"
           onChange={handleChange}
         />
-        <InputField name="price" value={product.price} type="number" labelContent="Precio" onChange={handleChange} />
+        <InputField
+          name="price"
+          value={product.price}
+          type="number"
+          labelContent="Precio"
+          onChange={handleChange}
+          args={{ min: "0", step: "0.01" }}
+        />
         <button className={styles.formButton} onClick={handleClick}>
           Agregar
         </button>

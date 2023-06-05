@@ -14,12 +14,15 @@
   text-align: center;
 }
 
+.buttonDelete {
+  float: right;
+}
+
 .item {
   background-color: goldenrod;
   border: 2px solid;
   border-radius: 1.5rem;
   color: black;
-  display: inline-block;
   margin: 0.25rem;
   max-width: 230px;
   min-width: 160px;

@@ -9,14 +9,14 @@ export default function ItemList(props) {
     <div className={styles.listContainer}>
       <h1 className={styles.title}>Listado</h1>
       <div className={styles.list}>
-        {children.map((item, index) => {
+        {children.map((item) => {
           return (
             <Item
               name={item.name}
               description={item.description}
               price={item.price}
-              id={index}
-              key={index}
+              id={item.id}
+              key={item.id}
               onDelete={onDelete}
             />
           );
