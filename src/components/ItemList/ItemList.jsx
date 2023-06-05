@@ -11,7 +11,14 @@ export default function ItemList(props) {
       <div className={styles.list}>
         {children.map((item, index) => {
           return (
-            <Item name={item.name} description={item.description} price={item.price} id={index} key={index} onDelete={onDelete} />
+            <Item
+              name={item.name}
+              description={item.description}
+              price={item.price}
+              id={index}
+              key={index}
+              onDelete={onDelete}
+            />
           );
         })}
       </div>

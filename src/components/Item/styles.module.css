@@ -1,3 +1,19 @@
+.button {
+  border: 1px solid black;
+  border-radius: 30%;
+  background: none;
+  font-size: x-large;
+  font-weight: 500;
+  padding: 0.2rem;
+  width: 25%;
+}
+
+.buttonContainer {
+  margin: 5px auto;
+  padding: 0.5rem;
+  text-align: center;
+}
+
 .item {
   background-color: goldenrod;
   border: 2px solid;
@@ -12,8 +28,8 @@
   width: 25%;
 }
 
-.buttonContainer {
-  margin: 5px auto;
-  padding: 0.5rem;
-  text-align: center;
+.itemCount {
+  font-size: large;
+  font-weight: 500;
+  margin: 1.25rem;
 }
