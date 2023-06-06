@@ -6,19 +6,27 @@ import InputField from "./InputField";
 export default function ItemForm(props) {
   const { onAdd: addItem } = props;
   const [newItem, setNewItem] = useState({ id: "", name: "", description: "", price: "" });
+  const [buttonStyle, setButtonStyle] = useState(styles.formButton); // formButtonOn
 
   function handleSubmit(event) {
     event.preventDefault();
     if (newItem.name !== "" && newItem.price > 0) {
       addItem(newItem);
       setNewItem({ id: "", name: "", description: "", price: "" });
+      setButtonStyle(styles.formButtonOff);
     }
   }
 
   function handleChange(event) {
     const { name, value } = event.target;
     setNewItem((prevProduct) => {
-      return { ...prevProduct, [name]: value };
+      const newObj = { ...prevProduct, [name]: value };
+      if (newObj.name !== "" && newObj.price > 0) {
+        setButtonStyle(styles.formButtonOn);
+      } else {
+        setButtonStyle(styles.formButtonOff);
+      }
+      return newObj;
     });
   }
 
@@ -42,7 +50,7 @@ export default function ItemForm(props) {
           onChange={handleChange}
           args={{ min: "0", step: "0.01" }}
         />
-        <button className={styles.formButton} type="submit">
+        <button className={`${styles.formButton} ${buttonStyle}`} type="submit">
           Agregar
         </button>
       </form>

@@ -45,10 +45,10 @@ p {
 }
 
 .item {
-  background-color: goldenrod;
+  background-color: #C69749;
   border: 2px solid;
   border-radius: 1.5rem;
-  color: black;
+  color: #000000;
   margin: 0.25rem;
   max-width: 230px;
   min-width: 160px;

@@ -1,4 +1,5 @@
 .container {
+  background-color: #282a3a;
   border: 2px solid;
   border-radius: 1.5rem;
   float: left;
@@ -9,7 +10,6 @@
 }
 
 .formButton {
-  background-color: darkgrey;
   border: none;
   border-radius: 1.5rem;
   font-size: large;
@@ -18,8 +18,12 @@
   width: 50%;
 }
 
-.formButton:hover {
-  background-color: white;
+.formButtonOff {
+  background-color: darkgrey;
+}
+
+.formButtonOn {
+  background-color: #c69749;
 }
 
 .inputContainer {
@@ -29,8 +33,8 @@
 }
 
 .inputField {
-  background-color: dimgray;
-  border: 1px solid white;
+  background-color: #735f32;
+  border: 1px solid black;
   border-radius: 1rem;
   display: block;
   font-size: x-large;
@@ -52,5 +56,4 @@
 
 .title {
   font-size: x-large;
-  width: 100%;
 }
