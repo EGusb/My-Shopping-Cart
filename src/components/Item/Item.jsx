@@ -31,6 +31,9 @@ export default function Item(props) {
 
   return (
     <div id={id} className={styles.item}>
+      <button className={styles.buttonDelete} onClick={handleDeleteItem}>
+        <i className="fa-solid fa-trash-can"></i>
+      </button>
       <h1>{name}</h1>
       <p>{description}</p>
       <h4>$ {price}</h4>
@@ -43,9 +46,6 @@ export default function Item(props) {
           +
         </button>
         <h3>$ {totalPrice}</h3>
-        <button className={styles.buttonDelete} onClick={handleDeleteItem}>
-          <i className="fa-solid fa-trash-can"></i>
-        </button>
       </div>
     </div>
   );
