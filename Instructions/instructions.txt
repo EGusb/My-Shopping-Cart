@@ -1,4 +1,10 @@
 Carrito
 Crear una aplicación de React la cual conste de una sola pantalla dividida en dos secciones.
-1. En la primer sección un formulario donde tengamos que cargar productos (nombre, descripcion y precio). El nombre y el precio son obligatorios, por lo tanto si el usuario no los ingresa el boton de agregar debería estar deshabilitado. Al hacer click en agregar ese producto debería mostrarse en la segunda sección de la aplicación.
-2. En esta segunda sección listar los productos que se van agregando indicando el nombre, descripción si la tiene y precio. Además debe contar con la opción de agregar o sacar del carrito (solo tiene agregado algo). En la esquina superior derecha informar al usuario el precio total que tiene ese carrito dependiendo los productos y la cantidad que agregó
+1. En la primer sección un formulario donde tengamos que cargar productos (nombre, descripcion y precio).
+El nombre y el precio son obligatorios, por lo tanto si el usuario no los ingresa el boton de agregar debería estar
+deshabilitado. Al hacer click en agregar ese producto debería mostrarse en la segunda sección de la aplicación.
+
+2. En esta segunda sección listar los productos que se van agregando indicando el nombre,
+descripción si la tiene y precio. Además debe contar con la opción de agregar o sacar del
+carrito (solo tiene agregado algo). En la esquina superior derecha informar al usuario el precio 
+total que tiene ese carrito dependiendo los productos y la cantidad que agregó
