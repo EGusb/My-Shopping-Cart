@@ -1,3 +1,11 @@
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: left;
+}
+
 .button {
   border: 1px solid black;
   border-radius: 30%;
