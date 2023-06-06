@@ -3,18 +3,30 @@ import { useState } from "react";
 import styles from "./styles.module.css";
 
 export default function Item(props) {
-  const { name, description, price, id, onDelete: deleteItem } = props;
+  const { name, description, price, id, addToCart, fixNum, onDelete: deleteItem } = props;
   const [itemCount, setItemCount] = useState(0);
-  const [totalPrice, setTotalPrice] = useState(Number(0).toFixed(2));
+  const [totalPrice, setTotalPrice] = useState(0);
 
-  function handleClick(num) {
-    setItemCount((prevItemCount) => {
-      if (prevItemCount > 0 || (prevItemCount === 0 && num > 0)) {
-        prevItemCount += num;
-        setTotalPrice(Number(price * prevItemCount).toFixed(2));
-      }
-      return prevItemCount;
-    });
+  function addOneItem() {
+    setItemCount((prevItemCount) => prevItemCount + 1);
+    setTotalPrice((prevTotalPrice) => fixNum(prevTotalPrice + price));
+    addToCart(fixNum(price));
+  }
+
+  function removeOneItem() {
+    setItemCount((prevItemCount) => Math.max(prevItemCount - 1, 0));
+    setTotalPrice((prevTotalPrice) => fixNum(Math.max(prevTotalPrice - price, 0)));
+
+    if (itemCount > 0) {
+      addToCart(fixNum(-price));
+    }
+  }
+
+  function handleDeleteItem() {
+    for (let i = 0; i < itemCount; i++) {
+      removeOneItem();
+    }
+    deleteItem(id);
   }
 
   return (
@@ -23,15 +35,15 @@ export default function Item(props) {
       <p>{description}</p>
       <h4>$ {price}</h4>
       <div className={styles.buttonContainer}>
-        <button className={styles.button} onClick={() => handleClick(-1)}>
+        <button className={styles.button} onClick={removeOneItem}>
           -
         </button>
         <span className={styles.itemCount}>{itemCount}</span>
-        <button className={styles.button} onClick={() => handleClick(1)}>
+        <button className={styles.button} onClick={addOneItem}>
           +
         </button>
         <h3>$ {totalPrice}</h3>
-        <button className={styles.buttonDelete} onClick={() => deleteItem(id)}>
+        <button className={styles.buttonDelete} onClick={handleDeleteItem}>
           <i className="fa-solid fa-trash-can"></i>
         </button>
       </div>
