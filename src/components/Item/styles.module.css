@@ -1,8 +1,23 @@
 h1 {
+  margin: 0;
+  padding: 1rem;
   text-align: center;
 }
 
+h3 {
+  margin: 0.25rem;
+  padding: 0.5rem;  
+}
+
+h4 {
+  margin: 0;
+  padding: 1rem 0.5rem;
+}
+
 p {
+  height: 20%;
+  margin: 0;
+  padding: 0.5rem;
   text-align: left;
 }
 
@@ -17,13 +32,13 @@ p {
 }
 
 .buttonContainer {
-  margin: 5px auto;
   padding: 0.5rem;
   text-align: center;
 }
 
 .buttonDelete {
   float: right;
+  position: relative;
 }
 
 .item {
