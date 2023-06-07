@@ -9,7 +9,7 @@ export default function Item(props) {
 
   function addOneItem() {
     setItemCount((prevItemCount) => prevItemCount + 1);
-    setTotalPrice((prevTotalPrice) => fixNum(prevTotalPrice + price));
+    setTotalPrice((prevTotalPrice) => fixNum(Number(prevTotalPrice) + Number(price)));
     addToCart(fixNum(price));
   }
 
